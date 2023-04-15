@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Lora&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Lora&family=Roboto&display=swap'); */
+
+/* font-family: 'Climate Crisis', cursive;
+font-family: 'Lora', serif;
+font-family: 'Roboto', sans-serif; */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 80vw;
+}
+
+.pannel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.pannel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;  
+}
+
+.pannel.active {
+  flex: 1;
+}
+
+.pannel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+
+@media(max-width: 580px) {
+    .container {
+        width: 100vw;
+    }
+
+    .pannel:nth-of-type(5),
+    .pannel:nth-of-type(6) {
+        display: none;
+    }
+
+}
